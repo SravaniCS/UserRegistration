@@ -17,7 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app.views import *
+#Registering Media url and Path here
+#import static function from django inorder to register also import settings
+from django.conf.urls.static import static
+from django.conf import settings
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('registration/',registration,name='registration'),
-]
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #concatinating static func to urls
