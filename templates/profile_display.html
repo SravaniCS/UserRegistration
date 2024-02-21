@@ -1,0 +1,45 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>Profile Display</title>
+{% endblock %}
+
+{% block body_block %}
+
+<style>
+    .frame {
+        width: 300px;
+        height: 350px;
+        border: 3px solid #ccc;
+        background: #eee;
+        margin: auto;
+        padding: 15px 10px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      table
+      {
+        background-color: darkgray;
+      }
+
+</style>
+<body>
+    <center>
+        <h1>Displaying User Profile</h1>
+        <div class="frame">
+        <img src="{{PO.profile_pic.url}}" alt="" srcset="" height="300px" width="300px">
+        </div>
+        <br><br>
+        <table border="2px">
+            <tr><th>
+            <h2>UserName:{{UO.username}}</h2>
+            <h2>Email:{{UO.email}}</h2>
+            <h2>Address:{{PO.address}}</h2>
+            </th></tr>
+        </table>
+        
+    </center>
+</body>
+{% endblock %}

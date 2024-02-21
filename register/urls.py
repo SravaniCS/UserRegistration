@@ -26,4 +26,10 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('registration/',registration,name='registration'),
+    path('user_login/',user_login,name='user_login'),
+    path('home/',home,name='home'),
+    path('user_logout/',user_logout,name='user_logout'),
+    path('profile_display/',profile_display,name='profile_display'),
+    path('change_password/',change_password,name='change_password'),
+
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #concatinating static func to urls

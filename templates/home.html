@@ -1,0 +1,23 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>Home Page</title>
+{% endblock %}
+
+{% block body_block %}
+<body>
+    <center>
+        {% if username %}
+
+            <h1>Welcome to Home Page Mr/Ms {{username}}</h1>
+            <p>This the a Simple Registration Webpage Where you can register your details <br>
+            Then Login to the website where you can see the provided details in this page <br>
+        Click on the  "profile_display" present in the nav bar and see the complete details of the User </p>
+        
+        {% else %}
+            <h1>Welcome to Home Page</h1>
+            
+        {% endif %}
+    </center>
+</body>
+{% endblock %}
